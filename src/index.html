@@ -1,13 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>EcommerceWithAngular16</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>commerce</title>
+
+  <!-- Favicon -->
+  <link rel="icon"  href="assets/images/icons/favicon.png">
+
+  <!-- Plugins CSS File -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Main CSS File -->
+  <link rel="stylesheet" href="assets/css/demo1.min.css" >
+
+  <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css" >
+  <link rel="stylesheet"  href="assets/vendor/simple-line-icons/css/simple-line-icons.min.css"   >
 </head>
+
 <body>
   <app-root></app-root>
+  <script>
+    WebFontConfig = {
+      google: {
+        families: ['Open+Sans:300,400,600,700', 'Poppins:300,400,500,600,700,800', 'Oswald:300,400,500,600,700,800', 'Playfair+Display:900', 'Shadows+Into+Light:400']
+      }
+    };
+    (function(d) {
+      var wf = d.createElement('script'),
+          s = d.scripts[0];
+      wf.src = 'src/assets/js/webfont.js';
+      wf.async = true;
+      s.parentNode.insertBefore(wf, s);
+    })(document);
+  </script>
+
+  <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/js/plugins.min.js" type="text/javascript" ></script>
+  <script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="assets/js/jquery.appear.min.js"type="text/javascript"></script>
+  <script src="assets/js/jquery.plugin.min.js"type="text/javascript"></script>
+  <script src="assets/js/jquery.countdown.min.js"type="text/javascript"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.min.js"></script>
+  <script>
+    (function() {
+      var js = "window['__CF$cv$params']={r:'7ef308a19e9a4727'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../cdn-cgi/challenge-platform/h/b/scripts/jsd/11b725eb/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+      var _0xh = document.createElement('iframe');
+      _0xh.height = 1;
+      _0xh.width = 1;
+      _0xh.style.position = 'absolute';
+      _0xh.style.top = 0;
+      _0xh.style.left = 0;
+      _0xh.style.border = 'none';
+      _0xh.style.visibility = 'hidden';
+      document.body.appendChild(_0xh);
+
+      function handler() {
+        var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+        if (_0xi) {
+          var _0xj = _0xi.createElement('script');
+          _0xj.innerHTML = js;
+          _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+        }
+      }
+
+      if (document.readyState !== 'loading') {
+        handler();
+      } else if (window.addEventListener) {
+        document.addEventListener('DOMContentLoaded', handler);
+      } else {
+        var prev = document.onreadystatechange || function() {};
+        document.onreadystatechange = function(e) {
+          prev(e);
+          if (document.readyState !== 'loading') {
+            document.onreadystatechange = prev;
+            handler();
+          }
+        };
+      }
+    })();
+  </script>
 </body>
 </html>
