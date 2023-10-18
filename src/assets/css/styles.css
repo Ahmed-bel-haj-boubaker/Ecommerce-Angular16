@@ -718,7 +718,7 @@
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url("../../../../../www.portotheme.com/html/porto_ecommerce/assets/images/owl.video.play.html") no-repeat;
+  background: url("assets/images/owl.video.play.html") no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -3307,8 +3307,8 @@ a:focus {
 
 @font-face {
   font-family: "porto";
-  src: url("../fonts/porto6e1d.eot?64334846");
-  src: url("../fonts/porto6e1d.eot?64334846#iefix") format("embedded-opentype"), url("../fonts/porto6e1d.woff2?64334846") format("woff2"), url("../fonts/porto6e1d.woff?64334846") format("woff"), url("../fonts/porto6e1d.ttf?64334846") format("truetype"), url("../fonts/porto6e1d.svg?64334846#porto") format("svg");
+  src: url("/src/assets/fonts/porto6e1d.eot?64334846");
+  src: url("/src/assets/fonts/porto6e1d.eot?64334846#iefix") format("embedded-opentype"), url("/src/assets/fonts/porto6e1d.woff2?64334846") format("woff2"), url("/src/assets/fonts/porto6e1d.woff?64334846") format("woff"), url("/src/assets/fonts/porto6e1d.ttf?64334846") format("truetype"), url("/src/assets/fonts/porto6e1d.svg?64334846#porto") format("svg");
   font-style: normal;
   font-weight: normal;
   font-display: swap;
