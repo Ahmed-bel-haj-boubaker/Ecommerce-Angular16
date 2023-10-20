@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Running Shoe Model X",
+      "description": "A high-performance running shoe for athletes.",
+      "price": 89.99,
+      "categoryId": 1,
+      "image": "running-shoe-1.jpg",
+      "sizes": ["US_8_13", "US_9_12", "US_10_11"],
+      "color": "Red/Black",
+      "brand": "RunningCo"
+    },
+    {
+      "id": 2,
+      "name": "Casual Shoe Model A",
+      "description": "Comfortable shoes for everyday wear.",
+      "price": 49.99,
+      "categoryId": 2,
+      "image": "casual-shoe-1.jpg",
+      "sizes": ["US_7_12", "US_8_11"],
+      "color": "Brown",
+      "brand": "CasualWear"
+    },
+    {
+      "id": 3,
+      "name": "Dress Shoe Model Z",
+      "description": "Elegant dress shoes for special occasions.",
+      "price": 69.99,
+      "categoryId": 3,
+      "image": "dress-shoe-1.jpg",
+      "sizes": ["US_6_11", "US_7_10"],
+      "color": "Black",
+      "brand": "Elegance"
+    },
+    {
+      "id": 4,
+      "name": "Sneakers Pro",
+      "description": "Stylish sneakers for a casual look.",
+      "price": 59.99,
+      "categoryId": 2,
+      "image": "sneakers-1.jpg",
+      "sizes": ["US_8_13", "US_9_12"],
+      "color": "White",
+      "brand": "SneakerWorld"
+    },
+    {
+      "id": 5,
+      "name": "Hiking Boot Adventure",
+      "description": "Sturdy boots for outdoor adventures.",
+      "price": 79.99,
+      "categoryId": 4,
+      "image": "hiking-boot-1.jpg",
+      "sizes": ["US_9_12", "US_10_11"],
+      "color": "Brown",
+      "brand": "OutdoorGear"
+    },
+    {
+      "id": 6,
+      "name": "Sandals Beach Life",
+      "description": "Comfortable sandals for the beach.",
+      "price": 29.99,
+      "categoryId": 6,
+      "image": "sandals-1.jpg",
+      "sizes": ["US_7_10", "US_8_11"],
+      "color": "Blue",
+      "brand": "BeachComber"
+    },
+    {
+      "id": 7,
+      "name": "Formal Shoe Elegance",
+      "description": "Classic formal shoes for special events.",
+      "price": 79.99,
+      "categoryId": 3,
+      "image": "formal-shoe-1.jpg",
+      "sizes": ["US_6_11", "US_7_10"],
+      "color": "Black",
+      "brand": "Elegance"
+    },
+    {
+      "id": 8,
+      "name": "Work Boot ToughGear",
+      "description": "Durable work boots for tough jobs.",
+      "price": 69.99,
+      "categoryId": 4,
+      "image": "work-boot-1.jpg",
+      "sizes": ["US_8_13", "US_9_12"],
+      "color": "Brown",
+      "brand": "ToughGear"
+    }
+  ]
+}

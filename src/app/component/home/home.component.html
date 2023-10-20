@@ -713,12 +713,12 @@
                                     <li class="active"><a href="demo1.html"style="text-decoration: none;"><i class="icon-home"></i>Home</a></li>
                                    
                                     <li>
-                                        <a href="demo1-product.html"style="text-decoration: none;" class="sf-with-ul"><i
+                                        <a routerLink="/products"style="text-decoration: none;" class="sf-with-ul"><i
                                                 class="sicon-basket"style="text-decoration: none;"></i>Products</a>
-                                        <div class="megamenu megamenu-fixed-width">
+                                        <div class="megamenu megamenu-fixed-width" *ngFor="let item of products">
                                             <div class="row">
                                                 <div class="col-lg-4">
-                                                    <a href="#" class="nolink pl-0" style="text-decoration: none;">Men's Clothing </a>
+                                                    <a href="#" class="nolink pl-0" style="text-decoration: none;">{{item.category}}</a>
                                                     <ul class="submenu">
                                                         <li><a href="product.html" style="text-decoration: none;">Shirts</a></li>
                                                         <li><a href="product-variable.html" style="text-decoration: none;">Pants</a></li>
@@ -735,35 +735,6 @@
                                                 </div>
                                                 <!-- End .col-lg-4 -->
 
-                                                <div class="col-lg-4">
-                                                    <a href="#" class="nolink pl-0" style="text-decoration: none;">Women's Clothing</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="product-extended-layout.html" style="text-decoration: none;">Dresses</a>
-                                                        </li>
-                                                        <li><a href="product-grid-layout.html" style="text-decoration: none;">Blouses and Tops</a></li>
-                                                        <li><a href="product-full-width.html" style="text-decoration: none;">Skirts</a></li>
-                                                        <li><a href="product-sticky-info.html" style="text-decoration: none;">Pants</a></li>
-                                                        <li><a href="product-sticky-both.html" style="text-decoration: none;">Coats and Jackets</a>
-                                                        </li>
-                                                        <li><a href="product-transparent-image.html">Sweaters and Cardigans</a></li>
-                                                        <li><a href="product-center-vertical.html" style="text-decoration: none;">Swimwear</a></li>
-                                                        <li><a href="product-center-vertical.html"style="text-decoration: none;">Sports Clothing</a></li>
-                                                        <li><a href="product-center-vertical.html"style="text-decoration: none;">Evening Wear</a></li>
-                                                        <li><a href="product-center-vertical.html"style="text-decoration: none;">Outerwear</a></li>
-                                                      
-                                                    </ul>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <a href="#" class="nolink pl-0" style="text-decoration: none;">Children's Clothing</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="product-extended-layout.html" style="text-decoration: none;">Girls' Clothing</a>
-                                                        </li>
-                                                        <li><a href="product-grid-layout.html"style="text-decoration: none;">Boys' Clothing</a></li>
-                                                        <li><a href="product-full-width.html"style="text-decoration: none;">Babies' Clothing</a></li>
-                                                  
-                                                      
-                                                    </ul>
-                                                </div>
                                                 <!-- End .col-lg-4 -->
 
                                       
@@ -1055,13 +1026,7 @@
     </div>
     <!-- End .page-wrapper -->
 
-    <div class="loading-overlay">
-        <div class="bounce-loader">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
-        </div>
-    </div>
+
 
     <div class="mobile-menu-overlay"></div>
     <!-- End .mobil-menu-overlay -->
@@ -1095,7 +1060,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="demo1-product.html" class="sf-with-ul"><i class="sicon-basket"></i>Products</a>
+                        <a routerLink="/products" class="sf-with-ul"><i class="sicon-basket"></i>Products</a>
                         <ul>
                             <li>
                                 <a href="#" class="nolink">PRODUCT PAGES</a>
