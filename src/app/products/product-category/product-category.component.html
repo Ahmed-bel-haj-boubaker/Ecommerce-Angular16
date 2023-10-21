@@ -195,11 +195,11 @@
                                     <div class="widget-body">
                                       <ul class="cat-list" style="display: inline;">
                                         <li *ngFor="let category of categoriesWithCounts">
-                                          <a (click)="getProductsByCategory(category.category)" [routerLink]="['/category', category.category]" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="widget-category-1">
-                                            {{ category.category }}
-                                            <span class="products-count"> ({{ category.count }}) </span>
-                                          </a>
-                                        </li>
+                                            <a (click)="getProductsByCategory(category.category)" [routerLink]="['/category', category.category]" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="widget-category-1">
+                                              {{ category.category }}
+                                              <span class="products-count"> ({{ category.count }}) </span>
+                                            </a>
+                                          </li>
                                       </ul>
                                     </div>
                                     <!-- End .widget-body -->

@@ -1,25 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService } from 'src/app/Core/Services/products.service';
+import { Component } from '@angular/core';
 import { Products } from '../model/products.model';
-import { Router, RouterModule } from '@angular/router';
+import { ProductsService } from 'src/app/Core/Services/products.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { catchError, of, switchMap } from 'rxjs';
 
 @Component({
-  selector: 'app-list-products',
-  templateUrl: './list-products.component.html',
-  styleUrls: ['./list-products.component.css']
+  selector: 'app-product-category',
+  templateUrl: './product-category.component.html',
+  styleUrls: ['./product-category.component.css']
 })
-export class ListProductsComponent implements OnInit {
+export class ProductCategoryComponent {
+
   products: Products[] = [];
   categoriesMap = new Map<number, Products[]>();
   categoriesWithCounts: { category: string; count: number }[] = [];
+  product: Products | null | undefined;
 
   constructor(
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.loadProducts();
+    this.route.params.pipe(
+      switchMap(params => this.productsService.getProductById(params['catName']).pipe(
+        catchError(error => {
+          // Handle the error here, e.g., show an error message
+          console.error('Error fetching product data:', error);
+          return of(null);
+        })
+      ))
+    ).subscribe((product: Products | null) => {
+      this.product = product;
+    });
   }
 
   private loadProducts() {
@@ -56,11 +71,9 @@ export class ListProductsComponent implements OnInit {
   viewProductDetail(productId: string) {
     this.router.navigate(['/product-details', productId]);
   }
-
   viewCategoryProduct(catName:string){
     this.router.navigate(['/category', catName]);
   }
-
   getProductsByCategory(catName: string) {
     this.productsService.getProductsByCategory(catName).subscribe((products) => {
       this.products = products;
@@ -84,3 +97,4 @@ export class ListProductsComponent implements OnInit {
   
   
 }
+

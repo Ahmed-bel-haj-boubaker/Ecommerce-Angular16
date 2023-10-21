@@ -20,4 +20,10 @@ export class ProductsService {
   getProductsByCategory(catName: String): Observable<Products[]> {
     return this.http.get<Products[]>(`${this.URL}?catName=${catName}`);
   }
+  sortProductsByNameASC(products: Products[]): Products[] {
+    return products.slice().sort((a, b) => a.name.localeCompare(b.name));
+  }
+  sortProductsByNameDESC(products: Products[]): Products[] {
+    return products.slice().sort((a, b) => b.name.localeCompare(a.name));
+  }
 }

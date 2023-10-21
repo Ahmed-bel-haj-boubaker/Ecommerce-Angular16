@@ -100,7 +100,7 @@
     },
     {
       "id": 6,
-      "name": "Sandals Beach Life",
+      "name": "andals Beach Life",
       "description": "Comfortable sandals for the beach.",
       "price": 29.99,
       "categoryId": 6,
@@ -114,7 +114,7 @@
     },
     {
       "id": 7,
-      "name": "Formal Shoe Elegance",
+      "name": "bormal Shoe Elegance",
       "description": "Classic formal shoes for special events.",
       "price": 79.99,
       "categoryId": 17,
@@ -141,7 +141,7 @@
       "quantity": 10
     }, {
       "id": 78,
-      "name": "Work Boot ToughGear",
+      "name": "hork Boot ToughGear",
       "description": "Durable work boots for tough jobs.",
       "price": 69.99,
       "categoryId": 4,
@@ -155,7 +155,7 @@
     },
     {
       "id": 79,
-      "name": "Work Boot ToughGear",
+      "name": "aork Boot ToughGear",
       "description": "Durable work boots for tough jobs.",
       "price": 69.99,
       "categoryId": 4,
