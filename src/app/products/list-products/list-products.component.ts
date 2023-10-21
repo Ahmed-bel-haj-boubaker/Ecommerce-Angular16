@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { ProductsService } from 'src/app/Core/Services/products.service';
 import { Products } from '../model/products.model';
 import { Router } from '@angular/router';
-import { Category } from '../model/category.model';
-import { CategoryService } from 'src/app/Core/Services/category.service';
 
 @Component({
   selector: 'app-list-products',
@@ -12,37 +9,61 @@ import { CategoryService } from 'src/app/Core/Services/category.service';
   styleUrls: ['./list-products.component.css']
 })
 export class ListProductsComponent implements OnInit {
+  products: Products[] = [];
+  categoriesMap = new Map<number, Products[]>();
+  categoriesWithCounts: { category: string; count: number }[] = [];
 
-  products : Products[] = [];
-  categories : Category[] = [];
-   constructor(private productsService :  ProductsService, private router : Router , private CategoryService : CategoryService){}
-  
-   ngOnInit(): void {
-   
+  constructor(
+    private productsService: ProductsService,
+    private router: Router
+  ) {}
+
+  ngOnInit(): void {
+    this.loadProducts();
+  }
+
+  private loadProducts() {
     this.productsService.getAllProducts().subscribe((products) => {
       this.products = products;
-      this.loadCategories();;
-    });
-     
-   }
 
-   loadCategories(){
-    this.CategoryService.getCategory().subscribe((categories)=>{
-      this.categories = categories;
-      this.assignCategoryToProduct();
-    })
-   }
-
-   assignCategoryToProduct(){
-    this.products.forEach((product)=>{
-      product.category = this.categories.find((Category)=>{
-        Category.id === product.categoryId
+      // Organize products into categories
+      this.products.forEach((product) => {
+        const categoryArray = this.categoriesMap.get(product.categoryId);
+        if (categoryArray) {
+          categoryArray.push(product);
+        } else {
+          // If the array doesn't exist, create a new one and add the product
+          this.categoriesMap.set(product.categoryId, [product]);
+        }
       });
+
+      // Calculate category counts
+      this.calculateCategoryCounts();
     });
-  
-}
-   viewProductDetail(productId: string) {
+  }
+
+  calculateCategoryCounts() {
+    this.categoriesWithCounts = Array.from(this.categoriesMap.entries()).map(([categoryId, productsInCategory]) => {
+      const categoryName = productsInCategory[0].catName; // Assuming all products in the category have the same category name
+      const productCount = productsInCategory.length;
+      return { category: categoryName, count: productCount };
+    
+    });
+    console.log(this.categoriesWithCounts);
+  }
+
+  viewProductDetail(productId: string) {
     this.router.navigate(['/product-details', productId]);
   }
 
+  getProductsByCategory(catName: string) {
+    this.productsService.getProductsByCategory(catName).subscribe((products) => {
+      this.products = products;
+    });
+  }
+  
+  
+  
+  
+  
 }

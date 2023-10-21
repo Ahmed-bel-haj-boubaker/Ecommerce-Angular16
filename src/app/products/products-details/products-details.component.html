@@ -19,8 +19,8 @@
                             <div class="product-slider-container">
                                 <div class="product-single-carousel owl-carousel owl-theme show-nav-hover">
                                    
-                                    <div class="product-item"*ngIf="products | async as productData">
-                                        <img class="product-single-image" [src]="productData.image" width="468" height="468" alt="product" />
+                                    <div class="product-item">
+                                        <img class="product-single-image" [src]="product?.image" width="468" height="468" alt="product" />
                                     </div>
                                 </div>
                                 <!-- End .product-single-carousel -->
@@ -33,9 +33,9 @@
                         </div>
                         <!-- End .product-single-gallery -->
 
-                        <div class="col-md-6 product-single-details" *ngIf="products | async as productData">
+                        <div class="col-md-6 product-single-details" >
 
-                            <h1 class="product-title">{{productData.name}}</h1>
+                            <h1 class="product-title">{{product?.name}}</h1>
 
                            
 
@@ -54,14 +54,14 @@
                             <hr class="short-divider">
 
                             <div class="price-box">
-                                <span class="old-price">${{productData.price}}</span>
-                                <span class="new-price">${{productData.price}}</span>
+                                <span class="old-price">${{product?.price}}</span>
+                                <span class="new-price">${{product?.price}}</span>
                             </div>
                             <!-- End .price-box -->
 
                             <div class="product-desc">
                                 <p>
-                                  {{productData.description}}
+                                  {{product?.description}}
                                 </p>
                             </div>
                             <!-- End .product-desc -->
@@ -73,12 +73,12 @@
                                 <li>
                                     CATEGORY:
                                     <strong>
-                                        <a href="#" class="product-category">#############</a>
+                                        <a href="#" class="product-category">{{ product?.catName}}</a>
                                     </strong>
                                 </li>
 
                                 
-                            </ul>
+                            </ul> 
 
                       
                                 <!-- End .product-single-qty -->
@@ -134,10 +134,10 @@
                         </li>
                     </ul>
 
-                    <div class="tab-content" *ngIf="products | async as productData">
+                    <div class="tab-content" >
                         <div class="tab-pane fade show active" id="product-desc-content" role="tabpanel" aria-labelledby="product-tab-desc">
                             <div class="product-desc-content">
-                                <p>{{productData.description}}</p> 
+                                <p>{{product?.description}}</p> 
                             </div>
                             <!-- End .product-desc-content -->
                         </div>

@@ -1,4 +1,9 @@
+
+
 export class Products{
+count() {
+throw new Error('Method not implemented.');
+}
     id: number;
     name: string;
     description: string;
@@ -7,7 +12,7 @@ export class Products{
     image: string;
     slug:string;
     qte:number;
-  category: import("c:/Users/belha/Desktop/Ecommerce Angular/EcommerceWithAngular16/src/app/products/model/category.model").Category | undefined;
+    catName:string;
     
     constructor() {
        this.id = 0;
@@ -18,5 +23,6 @@ export class Products{
        this.name='';
        this.qte=0;
        this.slug="";
+       this.catName="";
       }
     }

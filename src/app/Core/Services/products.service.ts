@@ -17,4 +17,7 @@ export class ProductsService {
    getProductById(id: string): Observable<Products> {
     return this.http.get<Products>(`${this.URL}/${id}`);
   }
+  getProductsByCategory(catName: String): Observable<Products[]> {
+    return this.http.get<Products[]>(`${this.URL}?catName=${catName}`);
+  }
 }

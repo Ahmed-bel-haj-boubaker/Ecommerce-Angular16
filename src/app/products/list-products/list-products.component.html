@@ -191,59 +191,24 @@
 
                                 <div class="collapse show" id="widget-body-2">
                                     <div class="widget-body">
-                                        <ul class="cat-list">
-                                            <li>
-                                                <a href="#widget-category-1" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="widget-category-1">
-													Accessories<span class="products-count">(3)</span>
-													<span class="toggle"></span>
-												</a>
-                                                <div class="collapse show" id="widget-category-1">
-                                                    <ul class="cat-sublist">
-                                                        <li>Caps<span class="products-count">(1)</span></li>
-                                                        <li>Watches<span class="products-count">(2)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#widget-category-2" class="collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="widget-category-2">
-													Dress<span class="products-count">(4)</span>
-													<span class="toggle"></span>
-												</a>
-                                                <div class="collapse" id="widget-category-2">
-                                                    <ul class="cat-sublist">
-                                                        <li>Clothing<span class="products-count">(4)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#widget-category-3" class="collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="widget-category-3">
-													Electronics<span class="products-count">(2)</span>
-													<span class="toggle"></span>
-												</a>
-                                                <div class="collapse" id="widget-category-3">
-                                                    <ul class="cat-sublist">
-                                                        <li>Headphone<span class="products-count">(1)</span></li>
-                                                        <li>Watch<span class="products-count">(1)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="#widget-category-4" class="collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="widget-category-4">
-													Fashion<span class="products-count">(6)</span>
-													<span class="toggle"></span>
-												</a>
-                                                <div class="collapse" id="widget-category-4">
-                                                    <ul class="cat-sublist">
-                                                        <li>Shoes<span class="products-count">(4)</span></li>
-                                                        <li>Bag<span class="products-count">(2)</span></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li><a href="#">Music<span class="products-count">(2)</span></a></li>
-                                        </ul>
+                                      <ul class="cat-list">
+                                        <li>
+                                          <a *ngFor="let category of categoriesWithCounts" (click)="getProductsByCategory(category.category)" role="button" aria-expanded="true" aria-controls="widget-category-1">
+                                            <!-- Display category names from 'products' array -->
+                                           
+                                  
+                                            <!-- Display categories and their counts from 'categoriesWithCounts' array -->
+                                            <ul >
+                                              <li>
+                                                <div >{{ category.category }} ({{ category.count }}) </div>
+                                              </li>
+                                            </ul>
+                                          </a>
+                                        </li>
+                                      </ul>
                                     </div>
                                     <!-- End .widget-body -->
-                                </div>
+                                  </div>
                                 <!-- End .collapse -->
                             </div>
                             <!-- End .widget -->

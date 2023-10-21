@@ -6,10 +6,13 @@
       "description": "A high-performance running shoe for athletes.",
       "price": 89.99,
       "categoryId": 1,
+      "catName": "Running Shoe",
       "image": "running-shoe-1.jpg",
       "sizes": ["US_8_13", "US_9_12", "US_10_11"],
       "color": "Red/Black",
-      "brand": "RunningCo"
+      "brand": "RunningCo",
+      "slug": "running-shoe",
+      "quantity": 50
     },
     {
       "id": 2,
@@ -17,10 +20,13 @@
       "description": "Comfortable shoes for everyday wear.",
       "price": 49.99,
       "categoryId": 2,
+      "catName": "Casual Shoe",
       "image": "casual-shoe-1.jpg",
       "sizes": ["US_7_12", "US_8_11"],
       "color": "Brown",
-      "brand": "CasualWear"
+      "brand": "CasualWear",
+      "slug": "casual-shoe",
+      "quantity": 30
     },
     {
       "id": 3,
@@ -28,10 +34,13 @@
       "description": "Elegant dress shoes for special occasions.",
       "price": 69.99,
       "categoryId": 3,
+      "catName": "Dress Shoe",
       "image": "dress-shoe-1.jpg",
       "sizes": ["US_6_11", "US_7_10"],
       "color": "Black",
-      "brand": "Elegance"
+      "brand": "Elegance",
+      "slug": "dress-shoe",
+      "quantity": 20
     },
     {
       "id": 4,
@@ -39,10 +48,13 @@
       "description": "Stylish sneakers for a casual look.",
       "price": 59.99,
       "categoryId": 2,
+      "catName": "Casual Shoe",
       "image": "sneakers-1.jpg",
       "sizes": ["US_8_13", "US_9_12"],
       "color": "White",
-      "brand": "SneakerWorld"
+      "brand": "SneakerWorld",
+      "slug": "sneakers",
+      "quantity": 40
     },
     {
       "id": 5,
@@ -50,10 +62,13 @@
       "description": "Sturdy boots for outdoor adventures.",
       "price": 79.99,
       "categoryId": 4,
+      "catName": "Hiking Boot",
       "image": "hiking-boot-1.jpg",
       "sizes": ["US_9_12", "US_10_11"],
       "color": "Brown",
-      "brand": "OutdoorGear"
+      "brand": "OutdoorGear",
+      "slug": "hiking-boot",
+      "quantity": 25
     },
     {
       "id": 6,
@@ -61,10 +76,13 @@
       "description": "Comfortable sandals for the beach.",
       "price": 29.99,
       "categoryId": 6,
+      "catName": "Sandals",
       "image": "sandals-1.jpg",
       "sizes": ["US_7_10", "US_8_11"],
       "color": "Blue",
-      "brand": "BeachComber"
+      "brand": "BeachComber",
+      "slug": "sandals",
+      "quantity": 60
     },
     {
       "id": 7,
@@ -72,10 +90,13 @@
       "description": "Classic formal shoes for special events.",
       "price": 79.99,
       "categoryId": 3,
+      "catName": "Formal Shoe",
       "image": "formal-shoe-1.jpg",
       "sizes": ["US_6_11", "US_7_10"],
       "color": "Black",
-      "brand": "Elegance"
+      "brand": "Elegance",
+      "slug": "formal-shoe",
+      "quantity": 15
     },
     {
       "id": 8,
@@ -83,10 +104,13 @@
       "description": "Durable work boots for tough jobs.",
       "price": 69.99,
       "categoryId": 4,
+      "catName": "Work Boot",
       "image": "work-boot-1.jpg",
       "sizes": ["US_8_13", "US_9_12"],
       "color": "Brown",
-      "brand": "ToughGear"
+      "brand": "ToughGear",
+      "slug": "work-boot",
+      "quantity": 10
     }
   ]
 }
